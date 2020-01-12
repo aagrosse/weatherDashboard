@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="row dashboard">
+        <div class="header">
+        <p id="header-text">Weather Dashboard</p>
+        </div>
+    
+    
+        <div class="col-md-3" id="form-container">
+    
+        <div class="input-group">
+            <h3>Search for a City:</h3>
+            <input id="input" type="text" placeholder=" Atlanta, GA" >
+            <button type="submit"class="btn btn-info p-3"><i class="fa fa-search"></i></button>
+        </div>
+          
+        </div>
+    <div class="col-md-9" id="weather-container">
+        <div class="row current-weather">
+            <div class="col-md-12">
+                <h3>
+                    <span id="w-location"></span> <span id="w-day"></span><span><img id="w-icon"/></span>
+                  </h3>
+                  <ul class="list-group mt-0">
+                    <li  id="temp">Temperature:</li>
+                    <li  id="humidity">Humidity:</li>
+                    <li  id="wind">Wind:</li>
+                    <li >
+                      UV Index:
+                      <span class="badge badge-danger" id="w-uvIndex"></span>
+                    </li>
+                  </ul>
+            </div>
+        </div>
+        <div class="row day-label" >
+            <h3>5 Day Forcast:</h3>
+        </div>
+        <div class="row 5day" >
+            <div class="day col-sm-2">
+
+            </div>
+            <div class="day col-sm-2">
+
+            </div>
+            <div class="day col-sm-2">
+
+            </div>
+            <div class="day col-sm-2">
+
+            </div>
+            <div class="day col-sm-2">
+
+            </div>
+        </div>
+
+        
+    </div>
+    </div>
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script></script>
+<script src="script.js"></script>
+</body>
+</html>

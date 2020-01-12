@@ -1,0 +1,86 @@
+html {
+    background-image: url("https://media.giphy.com/media/t7Qb8655Z1VfBGr5XB/giphy.gif");
+    background-color: rgba(255, 255, 255, 0);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+body {
+    font-family: 'Ibarra Real Nova', serif;
+    background-color: rgba(255, 255, 255, 0);   
+}
+
+#form-container {
+    background-color: rgba(255, 255, 255, 0.74);
+    height: auto; 
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 25px;
+    font-size: 16px;
+}
+
+.header {
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.425);
+    border-radius: 10px;
+    margin-top: 5px;
+
+}
+
+#header-text {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 45px;
+    padding-top: 12px;
+}
+
+.dashboard {
+    margin:2%;
+    position: center;
+}
+
+#weather-container {
+    background-color: rgba(255, 255, 255, 0.74);
+    height: 450px; 
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 25px;
+    font-size: 16px;
+    
+}
+
+.current-weather {
+    margin: 0px auto;
+    height: 200px; 
+    border-radius: 10px;
+    border: 1px solid rgb(160, 159, 159);
+    padding: 25px;
+    font-size: 16px;
+}
+
+.day {
+    background: rgb(12, 138, 170);
+    margin: 0px auto;
+    margin-top: 20px;
+    height: 150px;
+    margin-top: 5px; 
+    border-radius: 10px;
+    border: 1px solid rgb(160, 159, 159);
+    padding: 25px;
+    font-size: 16px;
+}
+
+.day-label {
+    margin: 10px 0px 0px 10px;
+    }
+
+li {
+    list-style-type: none;
+}
