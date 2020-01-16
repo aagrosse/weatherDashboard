@@ -75,7 +75,7 @@ function getWeather(city) {
             if (!searchArr.includes(city.toLowerCase())) {
                 searchArr.push(city);
                 saveCityBtns(city);
-                let cityBtn = $("<button>").text(city);
+                var cityBtn = $("<button>").text(city);
                 cityBtn.addClass("btn btn-outline-info btn-block");
                 cityBtn.attr("cityData", city);
 
@@ -120,7 +120,7 @@ $.ajax({
 
 function makeCityBtn (city) {
 // creates the city buttons after a search
-let cityBtn = $("<button>").text(city);
+var cityBtn = $("<button>").text(city);
   cityBtn.addClass("btn btn-outline-info btn-block");
   cityBtn.attr("cityData", city);
 
@@ -150,31 +150,31 @@ $.ajax({
     method: "GET"
   }).then(function(response) {
 console.log(response)
-let forcastDayArr = [];
+var forcastDayArr = [];
 
-for (let i = 1; i < 40; i++) {
-    let forcastDay = moment(response.list[i].dt_txt).format("YYYY-MM-DD");
+for (var i = 1; i < 40; i++) {
+    var forcastDay = moment(response.list[i].dt_txt).format("YYYY-MM-DD");
     if (!forcastDayArr.includes(forcastDay)) {
       forcastDayArr.push(forcastDay);
     }
   }
 
-  const today = moment().format("YYYY-MM-DD");
+  var today = moment().format("YYYY-MM-DD");
   if (forcastDayArr.includes(today)) {
-    const index = forcastDayArr.indexOf(today);
+    var index = forcastDayArr.indexOf(today);
     forcastDayArr.splice(index, 1);
   }
 
-  for (let j = 0; j < forcastDayArr.length; j++) {
-    let maxTempArr = [];
-    let temps = [];
-    let max = 0;
+  for (var j = 0; j < forcastDayArr.length; j++) {
+    var maxTempArr = [];
+    var temps = [];
+    var max = 0;
 
     for (let k = 0; k < 40; k++) {
-      let forcastDay = moment(response.list[k].dt_txt).format("YYYY-MM-DD");
+      var forcastDay = moment(response.list[k].dt_txt).format("YYYY-MM-DD");
 
       if (forcastDayArr[j] === forcastDay) {
-        const tempurature = response.list[k].main.temp;
+        var tempurature = response.list[k].main.temp;
 
         if (tempurature > max) {
           max = tempurature;
