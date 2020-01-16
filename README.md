@@ -39,7 +39,7 @@ A five day forcast will also be displayed showing the following:
 
   *  Current conditions (displayed as an icon)
   
-  *  Current temperature
+  *  High temperature
 
   *  Current humidity
 
