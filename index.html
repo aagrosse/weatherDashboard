@@ -24,13 +24,14 @@
             <input id="input" type="text" placeholder=" Atlanta, GA" >
             <button type="submit"class="btn btn-info p-3"><i class="fa fa-search"></i></button>
         </div>
-          
+        <div class="searches"></div> 
         </div>
     <div class="col-md-9" id="weather-container">
         <div class="row current-weather">
             <div class="col-md-12">
+                
                 <h3>
-                    <span id="w-location"></span> <span id="w-day"></span><span><img id="w-icon"/></span>
+                    <span id="location"></span> <span id="day"></span><span><img id="icon"/></span>
                   </h3>
                   <ul class="list-group mt-0">
                     <li  id="temp">Temperature:</li>
@@ -38,39 +39,70 @@
                     <li  id="wind">Wind:</li>
                     <li >
                       UV Index:
-                      <span class="badge badge-danger" id="w-uvIndex"></span>
+                      <span class="badge" id="uvIndex"></span>
                     </li>
                   </ul>
             </div>
         </div>
+        <!-- 5 day Forcast items -->
         <div class="row day-label" >
             <h3>5 Day Forcast:</h3>
         </div>
         <div class="row 5day" >
             <div class="day col-sm-2">
+                <div class="card-body">
+                    <h6 class="card-day-0">sample</h6>
+                    <h5 class="card-title-0">sample</h5>
+                    <img class="icon-0" id="icon2"/>
+                    <p class="tempHi-0">sample</p>
+                    <p class="humidity-0">sample</p>
+                  </div>
 
             </div>
             <div class="day col-sm-2">
+                <div class="card-body">
+                    <h6 class="card-day-1"></h6>
+                    <h5 class="card-title-1"></h5>
+                    <img class="icon-1" id="icon2"/>
+                    <p class="tempHi-1"></p>
+                    <p class="humidity-1"></p>
+                  </div>
 
             </div>
             <div class="day col-sm-2">
-
+                <div class="card-body">
+                    <h6 class="card-day-2"></h6>
+                    <h5 class="card-title-2"></h5>
+                    <img class="icon-2" id="icon2" />
+                    <p class="tempHi-2"></p>
+                    <p class="humidity-2"></p>
+                  </div>
             </div>
             <div class="day col-sm-2">
-
+                <div class="card-body">
+                    <h6 class="card-day-3"></h6>
+                    <h5 class="card-title-3"></h5>
+                    <img class="icon-3" id="icon2" />
+                    <p class="tempHi-3"></p>
+                    <p class="humidity-3"></p>
+                  </div>
             </div>
             <div class="day col-sm-2">
-
+                <div class="card-body">
+                    <h6 class="card-day-4"></h6>
+                    <h5 class="card-title-4"></h5>
+                    <img class="icon-4" id="icon2"/>
+                    <p class="tempHi-4"></p>
+                    <p class="humidity-4"></p>
+                  </div>
             </div>
         </div>
 
         
     </div>
     </div>
-<script
-src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
