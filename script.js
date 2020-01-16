@@ -3,7 +3,8 @@ $(document).ready(function() {
     getWeather()
 });
 
-
+var currentCity = "atlanta";
+var searchArr = JSON.parse(localStorage.getItem("searchList"));
 var key = "3111507f84c92e1af42924418f205282";
 
 
@@ -13,7 +14,7 @@ $(".searches").on("click", "button", function() {
   });
 
 
-$(".fa-search").on("click", function(){
+  $(".fa-search").on("click", function(){
     //search button click event that starts all the fun
     var cityName= $("#input").val();
     $("#input").attr("placeholder", " Enter Another City")
@@ -22,11 +23,32 @@ $(".fa-search").on("click", function(){
     
 });
 
+function loadCityBtns () {
+    // loads previously searched city buttons from local storage
+    if (localStorage.getItem("searchList") === null) {
+        searchArr = [];
+      } else {
+        
+        searchArr.forEach( function(city) {
+            let cityBtn = $("<button>").text(city);
+            cityBtn.addClass("btn btn-outline-info btn-block");
+            cityBtn.attr("cityData", city);
+
+             $(".searches").append(cityBtn);
+
+          
+        });
+      }
+    }
+
+
+
+
 
 function getWeather(city) {
 //get weather data from API and display in DOM
     if (city === "" || city === undefined){
-        city = "atlanta";
+        city = currentCity;
     } else {
         city = city.toLowerCase();
     }
@@ -53,7 +75,12 @@ function getWeather(city) {
             if (!searchArr.includes(city.toLowerCase())) {
                 searchArr.push(city);
                 saveCityBtns(city);
-                makeCityBtn(city);
+                let cityBtn = $("<button>").text(city);
+                cityBtn.addClass("btn btn-outline-info btn-block");
+                cityBtn.attr("cityData", city);
+
+                $(".searches").append(cityBtn);
+
               }
         }
     }
@@ -101,22 +128,12 @@ let cityBtn = $("<button>").text(city);
 }
 }
 
-function loadCityBtns () {
-// loads previously searched city buttons from local storage
-if (localStorage.getItem("searchList") === null) {
-    searchArr = ["Austin", "New York", "San Diego", "Orlando"];
-  } else {
-    searchArr = JSON.parse(localStorage.getItem("searchList"));
-    searchArr.forEach(function(city) {
-      makeCityBtns(city);
-    });
-  }
-}
+
 
 
 function saveCityBtns (city) {
 // saves searched city to local storage
-localStorage.setItem("cityList", JSON.stringify(searchArr));
+localStorage.setItem("searchList", JSON.stringify(searchArr));
 }
 
 
@@ -177,28 +194,6 @@ for (let i = 1; i < 40; i++) {
 });
 }
 
-// for (let i = 1; i < response.list.length; i++) {
-//     var current = response.list[i] 
-   
-//     var weatherObject = {
-//         icon: "http://openweathermap.org/img/w/" + (current.weather[0].icon) + ".png",
-//         minTemp: current.main.temp_min,
-//         maxTemp: current.main.temp_max,
-//         humidity: current.main.humidity,
-//         date: (convertDate(current.dt_txt))
-//     };
-    
-//       forcastArray.push(weatherObject);
-// }
-
-// console.log(weatherObject)
-
-
-
-
-// });
-
-// }
 
 function convertDate (x) {
 var parts = x.split('-');
