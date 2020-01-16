@@ -14,7 +14,7 @@ $(".searches").on("click", "button", function() {
   });
 
 
-  $(".fa-search").on("click", function(){
+  $("#citySearch").on("click", function(){
     //search button click event that starts all the fun
     var cityName= $("#input").val();
     $("#input").attr("placeholder", " Enter Another City")

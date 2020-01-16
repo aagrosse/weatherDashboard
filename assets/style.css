@@ -105,6 +105,10 @@ li {
     padding: .25rem;
 }
 
+.fa-search{
+    font-size: 25px;
+}
+
 /* Footer */
 
 footer {
