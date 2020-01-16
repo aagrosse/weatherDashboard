@@ -6,9 +6,7 @@
 * [Link](#link)
 * [Description](#description)
 * [Images](#images)
-* [Installation](#installation)
 * [Usage](#usage)
-* [Credits](#credits)
 * [License](#license)
 
 
@@ -20,54 +18,39 @@
 
 ## Description
 
-A simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+A weather dashboard to display the current weather as well as a 5 day forecast for selected cities.  Enter your city in the input provided and click the search button. 
 
-The app should display standard business hours (9 a.m. to 5 p.m.). Each time slot should represent one hour and contain the following:
+Current weather will display the following:
 
-* The time
+  *  Current conditions (displayed as an icon)
+  
+  *  Current temperature
 
-* A field to hold user input
+  *  Current humidity
 
-* A save button
+  *  Windspeed
 
-Clicking on the save button will store the time and user input in `localStorage`.
+  *  Uv index (will display as green, yellow, or red depending on the intensity)
 
-Near the top of the calendar, the application should display the current day. Additionally, each hour should be color coded to reflect whether the time slot is in the past, the present, or the future. This will change depending on the time of day.
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+A five day forcast will also be displayed showing the following:
 
-#### Minimum Requirements
+  *  Date
 
-* Functional, deployed application.
+  *  Current conditions (displayed as an icon)
+  
+  *  Current temperature
 
-* GitHub repository with a unique name and a README describing project.
+  *  Current humidity
 
-* The application displays timeblocks for standard business hours (9 a.m. to 5 p.m.).
+Cities will save as buttons in the panel and be clickable to re-access the weather data of past searches.
 
-* Each timeblock contains an input field and save button.
 
-* Clicking a timeblock's "Save" button stores the input text in local storage, allowing the text to persist when the application is refreshed.
-
-* The current day is displayed at the top of the calendar.
-
-* Each timeblock is color coded to indicate whether it is in a past, present, or future hour.
-
-```
-GIVEN that an employee adds events to a specific hour in a calendar
-
-WHEN the employee clicks the save button
-
-THEN events are saved in the timeblock for that hour
-```
 
 
 ## Images
 
 ![User Interface](./assets/images/screenshot.png)
-
-## Installation
-
-No notes needed
 
 
 ## Usage 
