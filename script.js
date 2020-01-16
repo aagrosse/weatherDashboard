@@ -75,11 +75,14 @@ $.ajax({
     $("#uvIndex").text(response.value);
     var uv = response.value;
     if (uv < 3) { 
-        $("#uvIndex").addClass("badge-success")
+        $("#uvIndex").removeClass()
+        $("#uvIndex").addClass("badge badge-success")
       } else if (uv < 7) { 
-        $("#uvIndex").addClass("badge-warning")
+        $("#uvIndex").removeClass()
+        $("#uvIndex").addClass("badge badge-warning")
       } else if (uv < 11) { 
-        $("#uvIndex").addClass("badge-danger")
+        $("#uvIndex").removeClass()
+        $("#uvIndex").addClass("badge badge-danger")
       }
   });
 }
