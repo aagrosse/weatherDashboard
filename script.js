@@ -3,13 +3,15 @@ $(document).ready(function() {
     getWeather()
 });
 
-var currentCity = "atlanta";
+
 var searchArr = JSON.parse(localStorage.getItem("searchList"));
 var key = "3111507f84c92e1af42924418f205282";
+var currentCity = "atlanta";
 
 
 $(".searches").on("click", "button", function() {
     city = $(this).attr("cityData");
+    localStorage.setItem("currentCity", city);
     getWeather(city);
   });
 
@@ -19,9 +21,14 @@ $(".searches").on("click", "button", function() {
     var cityName= $("#input").val();
     $("#input").attr("placeholder", " Enter Another City")
     $("#input").val("")
+    localStorage.setItem("currentCity", cityName);
     getWeather(cityName)
+
     
 });
+
+
+
 
 function loadCityBtns () {
     // loads previously searched city buttons from local storage
@@ -47,10 +54,15 @@ function loadCityBtns () {
 
 function getWeather(city) {
 //get weather data from API and display in DOM
-    if (city === "" || city === undefined){
-        city = currentCity;
-    } else {
-        city = city.toLowerCase();
+var currentCity = (localStorage.getItem("currentCity"));
+if (currentCity != null){
+    city = (localStorage.getItem("currentCity"))
+    console.log(localStorage.getItem("currentCity"))
+}else if (city === "" || city === undefined){ 
+            city = "atlanta";
+}else {
+      
+    city = city.toLowerCase();
     }
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&units=imperial"
     console.log(queryURL)
@@ -194,13 +206,13 @@ for (var i = 1; i < 40; i++) {
 });
 }
 
+//function i didnt use but i want to keep
+// function convertDate (x) {
+// var parts = x.split('-');
+// var day = parts[2].split('',2);
+// var newdate = parts[1]+'/'+day[0]+day[1]+'/'+parts[0];
 
-function convertDate (x) {
-var parts = x.split('-');
-var day = parts[2].split('',2);
-var newdate = parts[1]+'/'+day[0]+day[1]+'/'+parts[0];
-
-console.log(x)
-}
+// console.log(x)
+// }
 
 
