@@ -105,7 +105,7 @@ function getUV (lat, lon) {
 // an API call to get UV data an post data to the DOM
 var latitude = lat;
 var longitude = lon;
-var uvQuery = "http://api.openweathermap.org/data/2.5/uvi?appid=" + key + "&lat=" + latitude + "&lon=" + longitude
+var uvQuery = "https://api.openweathermap.org/data/2.5/uvi?appid=" + key + "&lat=" + latitude + "&lon=" + longitude
 
 $.ajax({
     url: uvQuery,
